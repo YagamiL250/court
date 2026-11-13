@@ -59,7 +59,8 @@ button {
 }
 
 .no {
-    background: #3b4050;
+    position: relative;
+    background: #d41313;
 }
 
 button:active {
