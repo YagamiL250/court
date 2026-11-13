@@ -7,13 +7,19 @@ function changeImage() {
     const images = [
         "https://media.tenor.com/NC9S9-pqbzkAAAAm/lucu-cute-cat.webp",
         "https://media.tenor.com/eX1d6fukpNQAAAAm/begging-cat-cat.webp",
-        "https://media.tenor.com/_oHR0WEdDW8AAAAm/cat-diragana.webp"
+        "https://media.tenor.com/_oHR0WEdDW8AAAAm/cat-diragana.webp",
+        "https://media.tenor.com/hLgZBJ7RjzYAAAAm/cute-dog.webp",
+        "https://media.tenor.com/-PdS4FLnAiYAAAAm/bugcat-bugcatsticker.webp",
+        "https://media.tenor.com/Enb26_N_bbIAAAAm/sad-cry.webp"
     ];
 
     const messages = [
-        "ไม่เอาจริงเหรอ 🥺",
-        "คิดดูดีๆอีกหรอบน้าา",
-        "เปิดใจให้หน่อยพี่คนนี้นะ"
+        "พี่อยากเป็นคนพิเศษของหนูได้ไหม",
+        "พี่อยากเป็นคนพิเศษของหนูได้ไหม",
+        "พี่อยากเป็นคนพิเศษของหนูได้ไหม",
+        "พี่อยากเป็นคนพิเศษของหนูได้ไหม",
+        "พี่อยากเป็นคนพิเศษของหนูได้ไหม",
+        "พี่อยากเป็นคนพิเศษของหนูได้ไหม"
     ];
 
     img.src = images[count];
@@ -34,4 +40,8 @@ function moveNo() {
 
     noButton.style.left = `${x}px`;
     noButton.style.top = `${y}px`;
+}
+
+function goToLove() {
+    window.location.href = "love.html";
 }

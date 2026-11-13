@@ -7,7 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #171923;
+    background: linear-gradient(
+        135deg,
+        #171923,
+        #24263a,
+        #33283e
+    );
 }
 
 .container {
@@ -19,57 +24,143 @@ body {
     padding: 20px;
 }
 
+/* กล่อง Popup */
 .popup {
     width: 100%;
     max-width: 400px;
-    background: #252938;
+    background: linear-gradient(
+        145deg,
+        #252f49,
+        #30334d
+    );
+
     padding: 35px 25px;
-    border-radius: 20px;
+    border-radius: 22px;
     text-align: center;
-    border: 1px solid #44495c;
+
+    border: 1px solid rgba(160, 190, 255, 0.3);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(115, 194, 251, 0.08);
+
+    transition: 0.3s ease;
 }
 
+.popup:hover {
+    box-shadow:
+        0 12px 40px rgba(115, 194, 251, 0.15);
+}
+
+/* หัวข้อ */
 .popup h2 {
-    color: white;
-    margin-bottom: 12px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.5;
+
+    text-shadow: 0 0 10px rgba(255, 193, 223, 0.2);
 }
 
+/* ข้อความ */
 .popup p {
-    color: #b8bdcc;
+    color: #d4d9eb;
     margin-bottom: 25px;
+    line-height: 1.7;
 }
 
+/* รูปภาพ */
+.popup img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* กลุ่มปุ่ม */
 .buttons {
     display: flex;
     gap: 12px;
 }
 
+/* ปุ่มทั่วไป */
 button {
     flex: 1;
     padding: 15px;
+
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
+
     font-size: 17px;
     cursor: pointer;
     color: white;
+
+    transition: all 0.25s ease;
 }
 
+/* ปุ่ม Yes - สีฟ้า */
 .yes {
-    background: #4779ef;
+    background: linear-gradient(
+        135deg,
+        #4779ef,
+        #73c2fb
+    );
+
+    box-shadow: 0 4px 12px rgba(71, 121, 239, 0.25);
 }
 
+.yes:hover {
+    background: linear-gradient(
+        135deg,
+        #73c2fb,
+        #8ed5ff
+    );
+
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(115, 194, 251, 0.35);
+}
+
+/* ปุ่ม No - สีชมพู */
 .no {
     position: relative;
-    background: #d41313;
+
+    background: linear-gradient(
+        135deg,
+        #f16b9e,
+        #e94b86
+    );
+
+    box-shadow: 0 4px 12px rgba(241, 107, 158, 0.25);
 }
 
+.no:hover {
+    background: linear-gradient(
+        135deg,
+        #ff8fbd,
+        #f16b9e
+    );
+
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(241, 107, 158, 0.35);
+}
+
+/* เอฟเฟกต์ตอนกด */
 button:active {
-    transform: scale(0.96);
+    transform: scale(0.94);
 }
 
 /* รองรับ iPad และมือถือ */
 @media (max-width: 768px) {
     .popup {
         max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        padding: 30px 20px;
+    }
+
+    button {
+        padding: 13px;
+        font-size: 16px;
     }
 }
