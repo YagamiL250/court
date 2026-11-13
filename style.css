@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #171923;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup {
+    width: 100%;
+    max-width: 400px;
+    background: #252938;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #44495c;
+}
+
+.popup h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.popup p {
+    color: #b8bdcc;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+}
+
+.yes {
+    background: #4779ef;
+}
+
+.no {
+    background: #3b4050;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* รองรับ iPad และมือถือ */
+@media (max-width: 768px) {
+    .popup {
+        max-width: 90%;
+    }
+}
